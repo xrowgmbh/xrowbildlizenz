@@ -27,8 +27,8 @@
 	    <div class="selectlist" style="margin-top:16px;float:left;">
 	        <div class="element">
 				<select id="{$id_base}_selectlist" class="ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}" name="{$attribute_base}_bildlizenz_selected_{$attribute.id}">
-					<option value="0" {if $attribute.data_text|compare('0')}selected="selected"{/if}>{'Delete on'|i18n( 'extension/xrowbildlizenz/datatypes' )}</option>
-					<option value="1" {if $attribute.data_text|compare('1')}selected="selected"{/if}>{'No expiration date'|i18n( 'extension/xrowbildlizenz/datatypes' )}</option>
+					<option value="0" {if $attribute.data_text|compare('0')}selected="selected"{/if}>{'Delete on'|i18n( 'extension/xrowimagelicensing/datatypes' )}</option>
+					<option value="1" {if $attribute.data_text|compare('1')}selected="selected"{/if}>{'No expiration date'|i18n( 'extension/xrowimagelicensing/datatypes' )}</option>
 				</select>
 	        </div>
 	    </div>

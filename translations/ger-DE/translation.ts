@@ -1,9 +1,9 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
-    <name>extension/xrowbildlizenz/datatypes</name>
+    <name>extension/xrowimagelicensing/datatypes</name>
     <message>
-        <source>License Image</source>
+        <source>Image Licensing</source>
         <translation>Bildlizenz</translation>
     </message>
     <message>

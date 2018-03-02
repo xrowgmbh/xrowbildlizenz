@@ -1,16 +1,16 @@
 <?php
 
 /*!
-  \class xrowBildlizenzType xrowbildlizenz.php
+  \class xrowImageLicensingType xrowimagelicensing.php
 */
 
-class xrowBildlizenzType extends eZDataType
+class xrowImageLicensingType extends eZDataType
 {
-    const DATA_TYPE_STRING = "xrowbildlizenz";
+    const DATA_TYPE_STRING = "xrowimagelicensing";
     
-    function xrowBildlizenzType()
+    function xrowImageLicensingType()
     {
-        $this->eZDataType( self::DATA_TYPE_STRING, ezpI18n::tr( 'extension/xrowbildlizenz/datatypes', "License Image", 'Datatype name' ),
+        $this->eZDataType( self::DATA_TYPE_STRING, ezpI18n::tr( 'extension/xrowimagelicensing/datatypes', "Image Licensing", 'Datatype name' ),
             array( 'serialize_supported' => true ) );
     }
     
@@ -394,6 +394,6 @@ class xrowBildlizenzType extends eZDataType
     }
 }
 
-eZDataType::register( xrowBildlizenzType::DATA_TYPE_STRING, "xrowBildlizenzType" );
+eZDataType::register( xrowImageLicensingType::DATA_TYPE_STRING, "xrowImageLicensingType" );
 
 ?>
