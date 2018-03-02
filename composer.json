@@ -1,6 +1,6 @@
 {
 	"name" : "xrow/xrowbildlizenz-ls",
-	"description" : "A image license datatype for eZ Publish",
+	"description" : "A image license datatype for eZ Legacy (must be used with xrowworkflow )",
 	"type" : "ezpublish-legacy-extension",
 	"license" : "GPL-2.0",
 	"authors" : [{
