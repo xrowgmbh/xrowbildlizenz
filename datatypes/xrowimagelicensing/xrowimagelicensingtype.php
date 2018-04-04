@@ -19,7 +19,12 @@ class xrowImageLicensingType extends eZDataType
      */
     function validateDateTimeHTTPInput( $day, $month, $year, $hour, $minute, $contentObjectAttribute, $http )
     {
-        $state = eZDateTimeValidator::validateDate( (int)$day, (int)$month, (int)$year );
+        if (is_numeric($day) && is_numeric($month) && is_numeric($year)) {
+            $state = eZDateTimeValidator::validateDate( $day, $month, $year );
+        } else { 
+            $state = eZInputValidator::STATE_INVALID;
+        }
+
         if ( $state == eZInputValidator::STATE_INVALID )
         {
             $contentObjectAttribute->setValidationError( ezpI18n::tr( 'kernel/classes/datatypes',
@@ -27,8 +32,12 @@ class xrowImageLicensingType extends eZDataType
             return eZInputValidator::STATE_INVALID;
         }
         
-        $state = eZDateTimeValidator::validateTime( (int)$hour, (int)$minute );
-        
+        if (is_numeric($hour) && is_numeric($minute)) {
+            $state = eZDateTimeValidator::validateTime( $hour, $minute );
+        } else {
+            $state = eZInputValidator::STATE_INVALID;
+        }
+  
         if ( $state == eZInputValidator::STATE_INVALID )
         {
             $contentObjectAttribute->setValidationError( ezpI18n::tr( 'kernel/classes/datatypes',
